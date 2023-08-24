@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script>
+      
+    tailwind.config = {
+      theme: {
+        
+        extend: {
+          colors: {
+         'blu': '#050042',
+         'gre': '#3b3e4e',
+         'vio': '#5d48e0',
+         'vio-shadow': '#4659c4',
+         'purp': '#5D48E0',
+         'lightpurp':" #E4E4FF",
+       
+
+         
+          },
+          rotate: {
+        '135': '135deg',
+      }
+     
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="overflow-x-hidden">  
+
+    <header class="bg-white lexend">
+        <nav class="mx-auto flex max-w-7xl items-center shadow-xl justify-between p-6   drop-shadow-lg lg:px-20 " aria-label="Global">
+          <div class="flex lg:flex-1">
+            <a href="./index.html" class="-m-1.5 p-1.5">
+              <span class="sr-only">Your Company</span>
+              <img class="h-5  w-auto" src="./img/image 1.svg" alt="">
+            </a>
+          </div>
+          <div class="flex lg:hidden">
+            <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"  id="mobile-open-button"> 
+              <span class="sr-only">Open main menu</span>
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </button>
+          </div>
+          
+          <div class="hidden lg:flex lg:gap-x-8">
+            
+            <a href="./index.html" class="text-sm font-semibold leading-6 text-gre hover:text-purp ">Home</a>
+            <div class="relative group" id="grup">
+
+              <button type="button" class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gre hover:text-purp " aria-expanded="false">
+                Our services
+                <svg class="h-5 w-5 flex-none text-gre" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                </svg>
+              </button>
+      
+                <div class="absolute hidden  -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5" id="show-sub-menu">
+          <div class="p-4">
+            <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+              
+              <div class="flex-auto">
+                <a href="./gd.html" class="block font-semibold text-gre hover:text-purp ">
+            Graphic design
+              </div>
+            </div>
+            <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+              
+              <div class="flex-auto">
+                <a href="./visualapp.html" class="block font-semibold text-gre hover:text-purp ">
+                  Apps
+              </div>
+            </div>
+            <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+              
+              <div class="flex-auto">
+                <a href="./webservices.html" class="block font-semibold text-gre hover:text-purp ">
+                  Web
+              </div>
+            </div>
+          </div>
+            </div>
+            </div>
+      
+            <a href="./portfolio.html" class="text-sm font-semibold leading-6 text-gre hover:text-purp ">Portfolio</a>
+            <a href="./team.html" class="text-sm font-semibold leading-6 text-gre hover:text-purp ">Team</a>
+            <a href="./blog.html" class="text-sm font-semibold leading-6 text-gre hover:text-purp ">Blog</a>
+          </div>
+          <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+            <a href="./contact.html" class="text-sm font-semibold leading-6 text-white bg-purp drop-shadow-xl rounded-lg px-8  py-3  text-center  font-bold hover:text-purp hover:bg-white hover:font-semi-bold ">Contact us </a>
+          </div>
+        </nav>
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <div class="lg:hidden hidden " id="mobile-menu" role="dialog" aria-modal="true">
+          <!-- Background backdrop, show/hide based on slide-over state. -->
+          <div class="fixed inset-0 z-10"></div>
+          <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 " id="mb-menu-show">
+            <div class="flex items-center justify-between">
+              <a href="./index.html" class="-m-1.5 p-1.5">
+                <span class="sr-only">Your Company</span>
+                <img class="h-4 w-auto" src="img/image 1.svg" alt="">
+              </a>
+              <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700"  id="mobile-menu-button">
+                <span class="sr-only">Close menu</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-6 flow-root">
+              <div class="-my-6 divide-y divide-gray-500/10">
+                <div class="space-y-2 py-6">
+                  <div class="-mx-3">
+                    <button type="button" class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" aria-controls="disclosure-1" aria-expanded="false" id="group1">
+                   Our services
+                      <!--
+                        Expand/collapse icon, toggle classes based on menu open state.
+      
+                        Open: "rotate-180", Closed: ""
+                      -->
+                      <svg  class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                      </svg>
+                    </button>
+                    <!-- 'Product' sub-menu, show/hide based on menu state. -->
+                      <div class="mt-2 space-y-2 hidden" id="group2">
+                      <a href="./gd.html" class="block rounded-lg hover:bg-vio hover:text-white py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50 group-hover:submenu-open">Graphic design</a>
+                      <a href="./visualapp.html" class="block hover:bg-vio hover:text-white rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50 group-hover:submenu-open">App</a>
+                      <a href="./webservices.html" class="block hover:bg-vio hover:text-white rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50 group-hover:submenu-open">Web</a>
+                    </div>
+                  </div>
+                  </div>
+                  <a href="./porfolio.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Portfolio</a>
+                  <a href="./team.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Team</a>
+                  <a href="./blog.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Blog</a>
+                </div>
+                <div class="py-6">
+                  <a href="./contact.html" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contact us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+<section class="text-gray-600 body-font" style="background-image: url(./img/Rectangle5.jpg);">
+  <div class="container mx-auto flex flex-col px-5 py-24 justify-center items-center">
+    <div class="w-full md:w-3/4 flex flex-col mb-16 items-center text-center">
+      <h1 class="title-font  md:text-6xl text-3xl mb-4 font-medium text-blu">The <b>fastest  company </b> <br>  making  <b>software in Korea</b></h1>
+      <p class="mb-8 leading-relaxed text-gre text-md font-medium">Potential is a lean startup developer with the fastest development <br> speed in Korea</p>
+    <button class="mx-auto bg-vio text-white px-9 py-4 text-lg font-semibold drop-shadow-xl
+      shadow-vio-shadow rounded-lg"> SCHEDULE FOR A CALL</button>
+    </div>
+  </div>
+</section>
+ 
+
+<section class="md:w-full text-gray-600 body-font" style="background-image: url(./img/Rectangle5.jpg);">
+  <div class="  py-8 mx-auto">
+   
+    <div class="flex flex-wrap ">
+      <div class="mx-auto p-4 lg:w-1/4 md:w-1/2  ">
+        <div class="h-full flex flex-col items-center text-center">
+          <img alt="team" class=" flex-shrink-0 rounded-xl w-full h-72  drop-shadow-2xl object-cover object-center mb-4" src="./img/1.png">
+        </div>
+         <div class="w-full">
+            <h2 class="title-font font-semibold text-2xl text-center text-blu -mt-8">Financial App</h2>
+          </div>
+      </div>
+   <div class="mx-auto p-4 lg:w-1/4 md:w-1/2">
+        <div class="h-full flex flex-col items-center text-center">
+          <img alt="team" class="flex-shrink-0 rounded-xl w-full drop-shadow-2xl h-72  object-cover object-center mb-4" src="./img/2.png">
+          <div class="w-full">
+            <h2 class="title-font font-semibold text-2xl text-blu">Web Application</h2>
+          
+          
+          </div>
+        </div>
+      </div>
+      <div class="mx-auto p-4 lg:w-1/4 md:w-1/2">
+        <div class="h-full flex flex-col items-center text-center">
+          <img alt="team" class="flex-shrink-0 rounded-xl w-full drop-shadow-2xl h-72 object-cover object-center mb-4" src="./img/3.png">
+          <div class="w-full">
+            <h2 class="title-font font-semibold text-2xl text-blu">Website Design</h2>
+          
+          
+          </div>
+        </div>
+      </div>
+      <div class="mx-auto p-4 lg:w-1/4 md:w-1/2">
+        <div class="h-full flex flex-col items-center text-center">
+          <img alt="team" class="h-72  flex-shrink-0 rounded-xl w-full drop-shadow-2xl object-cover object-center mb-4" src="./img/4.png">
+          <div class="w-full">
+            <h2 class="title-font font-semibold text-2xl text-blu">Food App</h2>
+          
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="text-gray-600 body-font" style="background-image: url(./img/Rectangle5.jpg);">
+  <div class=" mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+    <div class="lg:flex-grow md:w-1/2 lg:pl-16  pl-5 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+      <h1 class="title-font md:text-4xl lexend text-3xl mb-4 font-medium text-blu">How We Can Make <b> App/Web <br> Faster</b> Than Other Company</h1>
+      <p class="mb-8 mt-8 leading-relaxed text-gre font-md lg:pr-12">Scale your software operations through a custom <br> engineering team. Meet the demand of your company’s <br> operations with a high-performing nearshore team <br> skilled in the technologies you need.</p>
+      <div class="flex w-full md:justify-start justify-center items-end">
+        <p class="mb-8 leading-relaxed text-gre font-md lg:pr-12 text-purp"> See how it works -></p>
+      </div>
+    </div>
+    <div class="lg:mr-12  lg:gap-16  grid md:grid-cols-2 md:pl-5 lg:w-1/2 grid-cols-1 gap-y-12 gap-1   w-4/5">
+            <div class="mx-auto w-52 md:w-48 md:h-48 lg:w-60 lg:h-60 h-52 bg-white rounded-xl drop-shadow-2xl -rotate-12 transform tranlate-x-4 pt-3 pl-5">
+               <div class="w-10 h-10 mx-auto inline-flex items-center justify-center rounded-full bg-blue-100 text-white flex-shrink-0 ">
+               <img src="./img/Vector.svg" class="h-4 w-4 text-white " alt="">
+              </div>
+              <p class="font-bold text-sm lg:text-lg lg:pt-4">Experienced Team</p>
+              <p class=" pr-6 pt-3 text-xs lg:text-base lg:leading-5">We have experienced team for AI specialists, designers, and web experts who have worked on numerous projects..</p>
+              
+            </div>
+            <div class="mx-auto md:w-48 md:h-48 lg:w-60 lg:h-60 w-52 h-52 bg-white rounded-xl drop-shadow-2xl -rotate-12 transform tranlate-x-4 pt-3 pl-5">
+       <div class="w-10 h-10 mx-auto inline-flex items-center justify-center rounded-full bg-blue-100 text-white flex-shrink-0 ">
+               <img src="./img/Vector.svg" class="h-4 w-4 text-white" alt="">
+              </div>
+              <p class="font-bold text-sm lg:text-lg lg:pt-2">Streamlined Processes</p>
+              <p class="pr-6 pt-1 text-xs lg:text-base lg:leading-5">We optimized and streamlined development processes that ensure efficient project management, reducing unnecessary delays & ensuring timely deliveries.</p>
+              
+            </div>
+            <div class=" md:w-48 md:h-48 lg:w-60 lg:h-60 mx-auto w-52 h-52 bg-white rounded-xl drop-shadow-2xl -rotate-12 transform tranlate-x-4 pt-3 pl-5">
+       <div class="w-10 h-10 mx-auto inline-flex items-center justify-center rounded-full bg-blue-100 text-white flex-shrink-0 ">
+               <img src="./img/Vector.svg" class="h-4 w-4 text-white" alt="">
+              </div>
+              <p class="font-bold text-sm lg:text-lg lg:pt-2">Collaborative Approach</p>
+              <p class="pr-6 pt-1 text-xs lg:text-base lg:leading-5">This collaborative approach ensures that the final product aligns with the client's vision, reducing the need for extensive revisions.</p>
+              
+            </div>
+            <div class=" md:w-48 md:h-48 lg:w-60 lg:h-60 mx-auto w-52 h-52 bg-white rounded-xl drop-shadow-2xl -rotate-12 transform tranlate-x-4 pt-2 pl-5 ">
+       <div class="w-10 h-10 mx-auto inline-flex items-center justify-center rounded-full bg-blue-100 text-white flex-shrink-0 ">
+               <img src="./img/Vector.svg" class="h-4 w-4 text-white" alt="">
+              </div>
+              <p class="font-bold text-sm lg:text-lg lg:pt-1 ">Automation & AI Integration</p>
+              <p class="pr-6 pt-1 text-xs lg:text-base lg:leading-5 ">Our agency leverages automation tools and integrates AI where possible to speed up repetitive tasks, data processing, and testing.</p>
+              
+            </div>
+    </div>
+    
+  </div>
+</section>
+
+
+
+
+<div class="bg-white py-24 sm:py-32">
+  <div class="mx-auto  lg::w-3/4 md:w-9/12 w-11/12   ">
+    <h2 class="text-center lg:text-4xl text-2xl font-semibold leading-10 text-blu pb-4 lexend">Comparison between Typical <b> Korean Software <br> Companies and Potential </b></h2>
+
+    <h2 class="text-center text-lg mb-8 font-normal leading-8 text-gre">Unveiling the Advantages and Considerations for Your Software<br> Development Journey</h2>
+    <center>
+    <div class="grid grid-cols-2  justify-center w-full shadow-2xl rounded-xl  ">
+      <div class="text-lg md:text-2xl font-bold lexend text-white bg-purp py-6  w-full w-52   "  alt="Reform" style="border: 1px solid white; border-top-left-radius: 17px;border-top: transparent;border-left: transparent;">Potential</div>
+      <div class="text-lg md:text-2xl font-bold lexend text-white bg-purp py-6  w-full w-52  "  alt="Reform" style="border: 1px solid white; border-top-right-radius: 17px; border-top: transparent;border-right: transparent;">Typical Korean Software Company</div>
+
+
+
+       <div class=" text-lg md:text-xl text-white leading-relaxed pt-6 lg:pl-16 pl-5 pb-6 w-full   w-52   "  alt="Reform" style="border: 1px solid rgb(205, 193, 193); border-top: transparent;border-left: transparent;">
+        <h1 class="flex text-gre gap-3 pb-5 "> <img src="./img/Vector.svg" class="h-5 w-5 rounded-full p-1 mt-1 text-white bg-blue-100" alt=""> Shorter development cycles</h1>
+        <h1 class="flex text-gre gap-3 pb-5"> <img src="./img/Vector.svg" class="h-5 w-5 rounded-full p-1 mt-2 text-white bg-blue-100" alt="">Agile and efficient process</h1>
+      </div>
+
+       <div class="text-lg md:text-xl text-white leading-relaxed pt-6 lg:pl-16 pl-5 pb-6 w-full   w-52      "  alt="Reform" style="border: 1px solid rgb(205, 193, 193); border-top: transparent; border-right: transparent;border-right: transparent;">
+        <h1 class="flex text-gre gap-3 pb-5"> <img src="./img/Vector.svg" class="h-5 w-5 rounded-full p-1 mt-1 text-white bg-blue-100" alt="">Longer development timelines</h1>
+        <h1 class="flex text-gre gap-3 pb-5"> <img src="./img/Vector.svg" class="h-5 w-5 rounded-full p-1 mt-2 text-white bg-blue-100" alt="">Traditional development methods</h1>
+      </div>
+      
+
+
+
+        <div class="text-lg md:text-xl text-white leading-relaxed pt-6 lg:pl-16 pl-5 pb-6 w-full   w-52      "  alt="Reform" style="border: 1px solid rgb(205, 193, 193); border-top: transparent;border-left: transparent;">
+        <h1 class="flex text-gre gap-3 pb-5"> <img src="./img/Vector.svg" class="h-5 w-5 rounded-full p-1 mt-1 text-white bg-blue-100" alt=""> Competitive and transparent</h1>
+        <h1 class="flex text-gre gap-3 pb-5"> <img src="./img/Vector.svg" class="h-5 w-5 rounded-full p-1 mt-2 text-white bg-blue-100" alt="">No hidden fees</h1>
+      </div>
+
+       <div class="text-lg md:text-xl text-white leading-relaxed pt-6 lg:pl-16 pl-5 pb-6 w-full   w-52   "  alt="Reform" style="border: 1px solid rgb(205, 193, 193); border-top: transparent; border-right: transparent;border-right: transparent;">
+        <h1 class="flex text-gre gap-3 pb-5"> <img src="./img/Vector.svg" class="h-5 w-5 rounded-full p-1 mt-1 text-white bg-blue-100" alt=""> Variable pricing structures</h1>
+        <h1 class="flex text-gre gap-3 pb-5"> <img src="./img/Vector.svg" class="h-5 w-5 rounded-full p-1 mt-2 text-white bg-blue-100" alt="">Potential for hidden costs</h1>
+      </div>
+
+
+
+
+
+        <div class=" text-lg md:text-xl text-white leading-relaxed pt-6 lg:pl-16 pl-5 pb-6 w-full   w-52   "  alt="Reform" style="border-bottom-left-radius: 17px;border: 1px solid rgb(205, 193, 193); border-top: transparent;border-left: transparent;">
+        <h1 class="flex text-gre gap-3 pb-5"> <img src="./img/Vector.svg" class="h-5 w-5 rounded-full p-1 mt-1 text-white bg-blue-100" alt=""> Highly skilled professionals</h1>
+        <h1 class="flex text-gre gap-3 pb-5"> <img src="./img/Vector.svg" class="h-5 w-5 rounded-full p-1 mt-2 text-white bg-blue-100" alt="">Collaborative and diverse</h1>
+      </div>
+
+       <div class=" text-lg md:text-xl text-white leading-relaxed pt-6 lg:pl-16 pl-5 pb-6 w-full   w-52   "  alt="Reform" style=" border-bottom-right-radius: 17px;border: 1px solid rgb(205, 193, 193); border-top: transparent; border-right: transparent;border-right: transparent;">
+        <h1 class="flex text-gre gap-3 pb-5"> <img src="./img/Vector.svg" class="h-5 w-5 rounded-full p-1 mt-1  text-white bg-blue-100" alt=""> Limited talent pool</h1>
+        <h1 class="flex text-gre gap-3" pb-5> <img src="./img/Vector.svg" class="h-5 w-5 rounded-full p-1 mt-1 text-white bg-blue-100" alt="">Standard team composition</h1>
+      </div>
+  </center>
+
+    </div>
+  <div class="mx-20 mt-12 text-lg text-gre">
+      <p> <b>Time Taken: </b>At Potential, we prioritize agile and efficient development, ensuring quicker time-to-market for your projects compared to<br> traditional Korean software companies.</p><br>
+    <p><b>Cost: </b>With competitive and transparent pricing, Potential offers cost-effective solutions, sparing you from unexpected expenses that might arise with other providers.</p><br>
+    <p><b>Team: </b> Our team comprises highly skilled professionals from diverse backgrounds, bringing a wealth of expertise and innovative ideas to your projects, which may not be as readily available in a typical Korean software company.</p>
+  </div>
+  </div>
+
+
+
+
+
+
+<section class="text-gray-600 body-font lexend">
+  <div class="flex flex-col text-center w-full ">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font lexend mb-4 text-blu">Service <b>we provide</b></h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-gre">Potential is a software based company in Korea, Our main <br>services are AI, APPS & WEB</p>
+    </div>
+  <div class="container px-5 py-8 mx-auto lexend">
+    <div class="flex flex-wrap -m-4">
+      <div class="p-2 lg:w-1/3 w-full ">
+        <div class=" bg-white bg-opacity-75 px-8 pt-10 pb-5 rounded-lg overflow-hidden text-center relative rounded-xl" style='box-shadow: 1px 1px 1px 1px rgb(190, 181, 181);'>
+          <img class="w-16 h-16  rounded p-2 bg-vio bg-opacity-10 border mb-8" src="./img/mob1.svg"/>
+          
+        <h1 class="flex text-gre  mr-5 text-2xl font-bold pb-4">
+           AI
+            </h1>
+
+          <h1 class="flex text-gre  lg:gap-2  md:gap-2 md:pr-12 pb-3 text-xs">
+             <img src="./img/Vector.svg" class="h-3 w-3  text-white" alt="">Create Your Own ChatGpt for your business
+            </h1>
+          
+           <h1 class="flex text-gre gap-2  mr-5 pb-3 text-xs">
+             <img src="./img/Vector.svg" class="h-3 w-3  mt-1 text-white" alt="">AI based Human body Analysis
+            </h1>
+             <h1 class="flex text-gre gap-2  mr-5 pb-7 text-xs ">
+             <img src="./img/Vector.svg" class="h-3 w-3  mt-1 text-white" alt="">Data Labeling
+            </h1>
+        </div>
+      </div>
+     <div class="p-2 lg:w-1/3 w-full ">
+        <div class=" bg-purp text-white px-8 pt-10 pb-5 rounded-lg overflow-hidden text-center relative rounded-xl" >
+          <img class="w-16 h-16   rounded p-2 bg-white  border mb-8" src="./img/mob2.svg"/>
+          
+        <h1 class="flex text-white  mr-5 text-2xl font-bold pb-4">
+          Apps
+            </h1>
+
+          <h1 class="flex text-white   gap-2   pb-3 text-xs">
+             <img src="./img/white vactor.svg" class="h-3 w-3  text-white" alt="">Platform
+            </h1>
+          
+           <h1 class="flex text-white  gap-2  mr-5 pb-3 text-xs">
+             <img src="./img/white vactor.svg" class="h-3 w-3  mt-1 text-white" alt="">CCTV Monitoring System
+            </h1>
+             <h1 class="flex text-white  gap-2  mr-5 pb-7 text-xs ">
+             <img src="./img/white vactor.svg" class="h-3 w-3  mt-1 text-white" alt="">Computer Vision, AI
+            </h1>
+        </div>
+      </div>
+      <div class="p-2 lg:w-1/3 w-full ">
+        <div class=" bg-white bg-opacity-75 px-8 pt-10 pb-5 rounded-lg overflow-hidden text-center relative rounded-xl" style='box-shadow: 1px 1px 1px 1px rgb(190, 181, 181);'>
+          <img class="w-16 h-16  rounded p-2 bg-vio bg-opacity-10 border mb-8" src="./img/mobb3.svg"/>
+          
+        <h1 class="flex text-gre  mr-5 text-2xl font-bold pb-4">
+           Web
+            </h1>
+
+          <h1 class="flex text-gre  gap-2   pb-3 text-xs">
+             <img src="./img/Vector.svg" class="h-3 w-3  text-white" alt="">Platform
+            </h1>
+          
+           <h1 class="flex text-gre gap-2  mr-5 pb-3 text-xs">
+             <img src="./img/Vector.svg" class="h-3 w-3  mt-1 text-white" alt="">Landing Page
+            </h1>
+             <h1 class="flex text-gre gap-2  mr-5 pb-7 text-xs ">
+             <img src="./img/Vector.svg" class="h-3 w-3  mt-1 text-white" alt="">Data Labeling
+            </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+
+<div class="w-full h-full bg-blu lexend" >
+  <img class="w-56" src="./img/square.svg"/>
+  <p class="text-white text-4xl text-center -mt-12 pb-3">Our <b>portfolio</b></p>
+  <p class="text-white text-md text-center pb-16">Showcasing Our Finest Creations and Success Stories</p>
+<div class="md:flex grid  w-5/6 mx-auto justify-evenly">
+<div class="text-white md:w-1/2 w-full px-3 py-4 ">
+  <p class="title-font font-bold text-xl">AR</p>
+  <p class=" text-4xl font-bold lexend pt-4">AR Library </p>
+  <p class=" text-2xl font-semibold pt-4">Mobile App Design</p>
+  <p class=" text-md pt-4">Avalanche is an open-source platform for building<br> decentralized for AR Library - App Design.</p>
+  <a class=" underline pt-12 pb-6">See case studies</a>
+  <img src="./img/Group 119915.svg" class=" z-50 pt-6 w-4/1 " alt="" >
+</div>
+<img class=" md:w-1/2 w-full py-4" src="./img/f.png" />
+</div>
+ <div class="flex justify-end">
+
+    <img src="./img/sss.svg" class="w-60  -mt-16"  alt="" >
+
+  </div>
+</div>
+
+
+
+
+<section class="text-gray-600 body-font overflow-hidden">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="lg:w-4/5 mx-auto flex flex-wrap">
+      <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="./img/Rectangle 19.png">
+      <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+        <h1 class="text-gray-900 text-3xl title-font font-medium mb-1 lexend">We know <b>not only</b><br> software but<b> Business</b> </h1>
+        
+        <p class="leading-relaxed">In this concise yet powerful statement, we affirm our proficiency in not just the technical aspects of software but also our deep understanding of the business world. Our expertise goes beyond mere coding and development; we grasp the intricacies of various industries, market dynamics, and the ever-evolving needs of our clients. With this holistic knowledge, we are uniquely positioned to provide innovative and tailored solutions that drive real business growth and success. Emphasizing the fusion of technical prowess and business acumen, we stand ready to navigate the challenges of the digital landscape and unlock the full potential of your enterprise.</p>
+    
+       <a class="flex gap-5 text-purp pt-5">See more <img src='./img/tir.svg'class='w-4 ' /></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<section class="text-gray-600 body-font bg-purp w-3/4 mx-auto rounded-3xl lexend">
+  <img src="./img/lomba sada dag.svg" class="w-60 font-bold" />
+  <div class="container px-5  mx-auto">
+    <div class="flex flex-col text-center w-full mb-20 -mt-32">
+      <h1 class="sm:text-3xl text-4xl font-medium title-font mb-4 text-white">Meet our <b>Expert team</b></h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-white">Introducing Our expert team member. All the people are <br>very specialized in Potential. </p>
+    </div>
+    <div class="flex flex-wrap -m-4 text-center">
+      <div class="p-4 md:w-1/4 sm:w-1/2 w-full ">
+         <img class="rounded-xl" src="./img/Rectangle 20.jpg">
+        <div class=" px-4 py-2 rounded-lg">
+        <h2 class="title-font font-semibold text-xl text-white pb-2">Mr. Lukas</h2>
+          <p class="leading-relaxed text-white">Founder of Potential</p>
+        </div>
+      </div>
+    <div class="p-4 md:w-1/4 sm:w-1/2 w-full ">
+         <img class="rounded-xl" src="./img/team2.jpg">
+        <div class=" px-4 py-2 rounded-lg">
+        <h2 class="title-font font-semibold text-xl text-white pb-2">MK</h2>
+          <p class="leading-relaxed text-white">Sales Manager</p>
+        </div>
+      </div>
+    <div class="p-4 md:w-1/4 sm:w-1/2 w-full ">
+         <img class="rounded-xl" src="./img/team3.jpg">
+        <div class=" px-4 py-2 rounded-lg">
+        <h2 class="title-font font-semibold text-xl text-white pb-2">Md Forhad Alam</h2>
+          <p class="leading-relaxed text-white">Sr. UI/UX Designer</p>
+        </div>
+      </div>
+     <div class="p-4 md:w-1/4 sm:w-1/2 w-full ">
+         <img class="rounded-xl" src="./img/team4.jpg">
+        <div class=" px-4 py-2 rounded-lg">
+        <h2 class="title-font font-semibold text-xl text-white pb-2">Prabal Chattachart</h2>
+          <p class="leading-relaxed text-white">Developer</p>
+        </div>
+
+      </div>
+     <!--  <img src="./img/bakalej.svg" class="w-60 font-bold lg:-mt-12 lg:ml-[710px] md:-mt-20 md:ml-[500px] -mt-2 ml-20"  alt=""> -->
+    </div>
+  </div>
+  <div class="flex justify-end">
+
+    <img src="./img/bakalej.svg" class="w-60 font-bold "  alt="">
+
+  </div>
+</section>
+
+
+
+
+
+
+
+<div >
+  <p class="text-center text-4xl font-medium pt-52 text-blu lexend">Reviews by <b>Client</b></p>
+  <p class="text-center text-md font-medium  pt-5 text-gre pb-8">What they say about us Potential. </p>
+  <div class="md:flex flex-wrap  md:w-3/4 w-full mx-auto">
+    <div class="w-1/2 mx-auto justify-center">
+<p class="text-2xl font-medium">Amazing Quiety template!</p>
+<img src="./img/star.svg " class="w-28 pt-3 pb-3" />
+<p class="text-md text-gre font-medium">Appropriately negotiate interactive niches rather orchestrate scalable benefits whereas flexible systems. Objectively grow quality outsourcing without vertical methods of empowerment. Assertively negotiate just in time innovation after client-centered thinking.</p>
+<div class="flex gap-12">
+<div>
+<p class="text-md text-purp font-semibold font-medium pt-5 lexend">Jon Doe</p>
+<p class="text-md text-gre">CEO of Scater</p>
+</div>
+<img src="./img/lr.svg" class="w-20" alt="">
+</div>
+    </div>
+<img src="./img/lalbeti.png" class="md:w-2/5  w-1/2 mx-auto rounded-3xl"/>
+
+  </div>
+</div>
+
+
+
+
+<section class="text-gray-600 body-font mx-12">
+  <div class="container px-5 py-24 mx-auto">
+    
+      
+      <div class=" mx-auto py-6 justify-center mb-12">
+        <h1 class="sm:w-2/5 text-blu font-medium mx-auto title-font text-4xl mb-2 sm:mb-0 text-center lexend ">Our <b>Blog</b></h1>
+        <p class="sm:w-2/5 text-gre font-medium mx-auto mt-4 text-md mb-2 sm:mb-0 text-center">We have more blog for you</p>
+   
+      </div>
+    
+    <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+      <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+        <div class="rounded-lg h-64 overflow-hidden">
+          <img alt="content" class="object-cover object-center h-full w-full" src="./img/bap.png">
+        </div>
+        <h2 class="text-2xl font-semibold title-font text-blu mt-5 lexend ">Human-Centric AI:<br> Balancing Ethics in App</h2>
+        <p class="text-base leading-relaxed mt-2">Balancing Ethics in App Design" takes center stage, prompting a crucial dialogue on the responsible integration of artificial intelligence in app development.</p>
+        <a class="text-indigo-500 inline-flex items-center mt-3 font-semibold">Read more 
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+        <div class="rounded-lg h-64 overflow-hidden">
+          <img alt="content" class="object-cover object-center h-full w-full" src="./img/bap2.png">
+        </div>
+        <h2 class="text-2xl font-semibold title-font text-gray-900 mt-5 lexend">How to design App using<br> Figma tools</h2>
+        <p class="text-base leading-relaxed mt-2">In the realm of app design, Figma emerges as a powerful ally, revolutionizing the creative process with its intuitive and collaborative tools.</p>
+        <a class="text-indigo-500 inline-flex items-center mt-3 font-semibold">Read more 
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+        <div class="rounded-lg h-64 overflow-hidden">
+          <img alt="content" class="object-cover object-center h-full w-full" src="./img/bap3.png">
+        </div>
+        <h2 class="text-2xl font-semibold title-font text-gray-900 mt-5 lexend">Web Design Trends 2023: A <br> Look Ahead</h2>
+        <p class="text-base leading-relaxed mt-2">Provides a glimpse into the captivating landscape of web design, projecting the cutting-edge trends that will shape the digital world</p>
+        <a class="text-indigo-500 inline-flex items-center mt-3 font-semibold">Read more 
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<div class="lg:relative grid mt-36">
+
+      <div class="lg:absolute lg:-top-36  text-white lg:right-4  flex justify-center items-center w-full z-10">
+        <div class=" lg:w-9/12 h-full w-full py-5 px-4 rounded-lg  mx-auto bg-vio " >
+         <div class='flex flex-wrap  md:flex-row flex-col w-full md:p-6 p-3  md:justify-between '>
+           <h1 class='text-4xl  lexend leading-relaxed tracking-wide mx-5 mb-4 md:mb-0'>Are you looking for <b> AI, <br>
+          Apps, Web services?</b> </h1>
+       <button class='w-[195px] h-[82px] bg-white mx-auto lg:mx-0 hover:bg-grey-200 rounded-lg'><a href="./contact.html" class='lexend text-purp text-xl font-bold'>Contact us</a></button>
+  </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+      
+    
+  <footer class="text-white body-font w-full h-full bg-blu" >
+    <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+      <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+        <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900" href="./index.html">
+         
+          <img src="./img/ogo.svg" class="w-40 text-white pl-3 ">
+        </a>
+        <p class="mt-2 text-sm pl-3">Potential is a lean startup developer with the fastest development speed in Korea</p>
+        <p class="mt-2 text-lg font-bold pl-3 font-lexend">Let's talk</p>
+        <p class="mt-2 text-sm pl-3">contact@potentialai.com <br>+82 491-81-02498
+
+        </p>
+      </div>
+      <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium tracking-widest text-lg mb-3 font-lexend">Recent project</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class=" hover:text-gray-800">Projct Name</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-100">Projct Name</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-100">Projct Name</a>
+            </li>
+            <li>
+              <a class="hover:text-gray-100">Projct Name</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium  tracking-widest text-lg mb-3 font-lexend">Navigation</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class=" hover:text-gray-100">About potential</a>
+            </li>
+            <li>
+              <a class= "hover:text-gray-100">Services of AI </a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-100">Services of App</a>
+            </li>
+            <li>
+              <a class="hover:text-gray-100">Services of Web</a>
+            </li>
+                        <li>
+              <a class=" hover:text-gray-100">Blog</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-100">Contact</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium  tracking-widest text-lg mb-3 font-lexend">Legal</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class=" hover:text-gray-100">Terms and conditons</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-100">Privacy policy</a>
+            </li>
+            <li>
+              <a class="hover:text-gray-100">Cookie policy</a>
+            </li>
+                    </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium  tracking-widest text-lg mb-3 font-lexend">Our Location</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class=" hover:text-gray-800">South Korea</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-800">Bangladesh</a>
+            </li>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="md:flex md:flex-row md:flex-wrap grid grid-cols-3 gap-x-4 mx-auto p-6 justify-center justify-evenly mb-5 text-white">
+      <p class=" font-lexend text-xl">Dribbble</p>
+      <p class=" font-lexend text-xl"> Behance</p>
+      <p class=" font-lexend text-xl">Github</p>
+      <p class=" font-lexend text-xl">Linked In</p>
+      <p class=" font-lexend text-xl">Facebook</p>
+      <p class=" font-lexend text-xl">Instagram</p>
+    </div>
+    <img src="./img/Line 3.svg" alt="">
+    <div class="bg-blu" >
+      <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+        <p class="text-white text-sm mx-auto text-center sm:text-left">Copyright © 2023 Potential. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+
+  </footer>
+  
+</div>
+
+ <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenuOpenButton = document.getElementById('mobile-open-button');
+        const mbopen = document.getElementById('mb-menu-show');
+        const mobileMenu = document.getElementById('mobile-menu');
+      const group1 = document.getElementById('group1');
+      const group2 = document.getElementById('group2');
+        mobileMenuButton.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      
+        mobileMenuOpenButton.addEventListener('click', () => {
+          mobileMenu.classList.remove('hidden');
+        
+        });
+        const grup = document.getElementById('grup')
+        const submenu = document.getElementById('show-sub-menu');
+        grup.addEventListener('click',()=>{
+          submenu.classList.toggle('hidden')
+        })
+ group1.addEventListener('click', () => {
+    group2.classList.toggle('hidden');
+});
+
+           </script>
+</body>
+</html>

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+         'blu': '#050042',
+         'gre': '#3b3e4e',
+         'vio': '#5d48e0',
+         'vio-shadow': '#4659c4',
+         'purp': '#5D48E0',
+         
+          },
+          }
+        }
+      }
+    </script>
+    <style>
+      select-selected{
+        background-color: #5d48e0;
+      }
+    </style>
+    <link rel="stylesheet" href="./style.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+
+    <title>Contact Us</title>
+</head>
+<body>
+      <header class="bg-white lexend">
+        <nav class="mx-auto flex max-w-7xl items-center shadow-xl justify-between p-6   drop-shadow-lg lg:px-20 " aria-label="Global">
+          <div class="flex lg:flex-1">
+            <a href="./index.html" class="-m-1.5 p-1.5">
+              <span class="sr-only">Your Company</span>
+              <img class="h-5  w-auto" src="./img/image 1.svg" alt="">
+            </a>
+          </div>
+          <div class="flex lg:hidden">
+            <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"  id="mobile-open-button"> 
+              <span class="sr-only">Open main menu</span>
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </button>
+          </div>
+          
+          <div class="hidden lg:flex lg:gap-x-8">
+            
+            <a href="./index.html" class="text-sm font-semibold leading-6 text-gre hover:text-purp ">Home</a>
+            <div class="relative group" id="grup">
+
+              <button type="button" class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gre hover:text-purp " aria-expanded="false">
+                Our services
+                <svg class="h-5 w-5 flex-none text-gre" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                </svg>
+              </button>
+      
+                <div class="absolute hidden  -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5" id="show-sub-menu">
+          <div class="p-4">
+            <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+              
+              <div class="flex-auto">
+                <a href="./gd.html" class="block font-semibold text-gre hover:text-purp ">
+            Graphic design
+              </div>
+            </div>
+            <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+              
+              <div class="flex-auto">
+                <a href="./visualapp.html" class="block font-semibold text-gre hover:text-purp ">
+                  Apps
+              </div>
+            </div>
+            <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+              
+              <div class="flex-auto">
+                <a href="./webservices.html" class="block font-semibold text-gre hover:text-purp ">
+                  Web
+              </div>
+            </div>
+          </div>
+            </div>
+            </div>
+      
+            <a href="./portfolio.html" class="text-sm font-semibold leading-6 text-gre hover:text-purp ">Portfolio</a>
+            <a href="./team.html" class="text-sm font-semibold leading-6 text-gre hover:text-purp ">Team</a>
+            <a href="./blog.html" class="text-sm font-semibold leading-6 text-gre hover:text-purp ">Blog</a>
+          </div>
+          <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+            <a href="./contact.html" class="text-sm font-semibold leading-6 text-white bg-purp drop-shadow-xl rounded-lg px-8  py-3  text-center  font-bold hover:text-purp hover:bg-white hover:font-semi-bold ">Contact us </a>
+          </div>
+        </nav>
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <div class="lg:hidden hidden " id="mobile-menu" role="dialog" aria-modal="true">
+          <!-- Background backdrop, show/hide based on slide-over state. -->
+          <div class="fixed inset-0 z-10"></div>
+          <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 " id="mb-menu-show">
+            <div class="flex items-center justify-between">
+              <a href="./index.html" class="-m-1.5 p-1.5">
+                <span class="sr-only">Your Company</span>
+                <img class="h-4 w-auto" src="img/image 1.svg" alt="">
+              </a>
+              <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700"  id="mobile-menu-button">
+                <span class="sr-only">Close menu</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-6 flow-root">
+              <div class="-my-6 divide-y divide-gray-500/10">
+                <div class="space-y-2 py-6">
+                  <div class="-mx-3">
+                    <button type="button" class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" aria-controls="disclosure-1" aria-expanded="false" id="group1">
+                   Our services
+                      <!--
+                        Expand/collapse icon, toggle classes based on menu open state.
+      
+                        Open: "rotate-180", Closed: ""
+                      -->
+                      <svg  class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                      </svg>
+                    </button>
+                    <!-- 'Product' sub-menu, show/hide based on menu state. -->
+                      <div class="mt-2 space-y-2 hidden" id="group2">
+                      <a href="./gd.html" class="block rounded-lg hover:bg-vio hover:text-white py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50 group-hover:submenu-open">Graphic design</a>
+                      <a href="./visualapp.html" class="block hover:bg-vio hover:text-white rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50 group-hover:submenu-open">App</a>
+                      <a href="./webservices.html" class="block hover:bg-vio hover:text-white rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50 group-hover:submenu-open">Web</a>
+                    </div>
+                  </div>
+                  </div>
+                  <a href="./porfolio.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Portfolio</a>
+                  <a href="./team.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Team</a>
+                  <a href="./blog.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Blog</a>
+                </div>
+                <div class="py-6">
+                  <a href="./contact.html" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contact us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="text-gray-600 body-font z-10" style="background-image: url('./img/Rectangle 6.jpg')">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+          <div class="lg:flex-grow md:w-1/2 pr-3 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+            <h1 class="title-font sm:text-6xl pl-24 text-5xl mb-4 font-medium  tracking-wide text-blu">
+                We're Here to <br>  <b>Help You</b> 
+            </h1>
+          </div>
+          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+           <h2 class="text-left font-semibold text-3xl text-blu tracking-wide mb-6 flex">
+        <img src="./img/Line 9.svg" alt=""> &nbsp;
+            Reach Out to Us</h2>
+           <p class=" text-lg mb-8 lexend ">
+            We'd love to hear from you! Whether you have questions about our AI, App, or Web services or want to discuss potential collaboration opportunities, don't hesitate to <br> reach out. Our team is dedicated to providing top-notch <br> solutions tailored to your specific needs. Feel free to use <br> the contact form below or use the provided contact <br> information to connect with us.
+           </p>
+        </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 z-10 body-font w-full">
+        <div class=" mx-auto flex px-5 py-24 items-center justify-center flex-col">
+                      <div class="text-center lexend lg:w-2/3 w-full">
+            <h1 class="title-font md:text-5xl text-3xl mb-4 font-bold text-gray-900 mb-24">Hey! Let's Talk..</h1>
+            
+            <h2 class="mb-2 leading-relaxed font-bold text-blu tracking-wide text-lg text-left mt-24">What are you looking for?</h2>
+
+            <p class="mb-8 leading-relaxed text-left">
+                Looking for AI, App, and Web Services? Post your query now, and we'll get in touch with you soon!</p>
+            <div class="flex justify-center">
+                <form class="text-gray-600 body-font relative">
+                    <div class="container px-5 py-24 mx-auto">
+                      <div class="lg:w-full md:w-2/3 mx-auto">
+                        <div class="flex flex-wrap -m-2">
+                            
+                          <div class=" w-full">
+                            <div class="relative">
+                              <label for="message" class="leading-7 text-lg font-bold text-left text-blu absolute left-0 -top-10"> Your Message</label>
+                              <textarea required id="message" name="message" class="w-full  bg-opacity-50 rounded border-10 border-vio focus:border-vio p-5 focus:bg-white focus:ring-2 focus:ring-purple-200 h-40 text-base outline-none text-gre py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out" placeholder="Your message"></textarea>
+                            </div></div>
+                        <div class='w-full mt-12 p-2 flex'>
+                            <div class="mb-8  pr-3 md:w-1/2 w-full">
+                                <div class="relative">
+                                  <label for="name" class="leading-7 text-sm text-blu font-bold absolute left-0 -top-10">Full Name</label>
+                                  <input required type="text" id="name" name="name" class="w-full  bg-opacity-50 rounded border-100 border-vio focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-purle-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors p-3 duration-200 ease-in-out">
+                                </div>
+                              </div>
+                              <div class="mb-8 pl-3 md:w-1/2 w-full">
+                                <div class="relative">
+                                  <label for="email" class="leading-7 text-sm text-blu font-bold absolute left-0 -top-10  ">Email</label>
+                                  <input required type="email" id="email" name="email" class="w-full  bg-opacity-50 rounded border-3 border-vio focus:border-vio focus:bg-white focus:ring-2 focus:ring-purple-200 text-base p-3outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                </div>
+                            
+                        </div>
+                        </div>
+
+                        <div class='w-full mt-12 p-2 flex'>
+                            <div class="mb-8  pr-3 md:w-1/2 w-full">
+                                <div class="relative">
+                                  <label for="name" class="leading-7 text-sm text-blu font-bold absolute left-0 -top-10">Service required</label>
+                                  <select required type="options" id="name" name="name" class="w-full   rounded border-100 border-vio focus:border-vio focus:bg-white focus:ring-2 focus:ring-purple-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                    <option value="" disabled  selected class="text-white lexend bg-blu hover:bg-purp" style="background-color: #050042;">Select</option>
+                                    <option value="AI" class="text-white  hover:bg-purp" class="text-white lexend bg-blu hover:bg-vio" style="background-color: #050042;">AI</option>
+                                    <option value="APP" class="text-white lexend bg-blu hover:bg-vio" style="background-color: #050042;">APP</option>
+                                    <option value="Web" class="text-white lexend bg-blu hover:bg-vio" style="background-color: #050042;">web</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="mb-8 pl-3 md:w-1/2 w-full">
+                                <div class="relative">
+                                  <label for="email" class="leading-7 text-sm text-blu font-bold absolute left-0 -top-10  ">Budget</label>
+                                  <select required type="email" id="email" name="email" class="w-full  bg-opacity-50 rounded border-3 border-vio focus:border-vio focus:bg-white focus:ring-2 focus:ring-purple-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                    
+                                    <option value="" disabled  selected class="text-white rounded-xl lexend bg-blu hover:bg-purp" style="background-color: #050042;">Select</option>
+                                    <option value=" $1000 USD" class="text-white  hover:bg-purp" class="text-white lexend bg-blu hover:bg-vio" style="background-color: #050042;"> $1000 USD</option>
+                                    <option value="$2000 - $3000 USD" class="text-white lexend bg-blu hover:bg-vio" style="background-color: #050042;">$2000 - $3000 USD</option>
+                                    <option value="$2000 - $3000 USD" class="text-white lexend bg-blu hover:bg-vio" style="background-color: #050042;">$2000 - $3000 USD</option>
+                                    <option value="$2000 - $3000 USD" class="text-white lexend bg-blu hover:bg-vio" style="background-color: #050042;">$2000 - $3000 USD</option>
+                                    <option value="$2000 - $3000 USD" class="text-white lexend bg-blu hover:bg-vio" style="background-color: #050042;">$2000 - $3000 USD</option>
+                                  <option value="$2000 - $3000 USD" class="text-white lexend bg-blu hover:bg-vio" style="background-color: #050042;">$2000 - $3000 USD</option>
+                                    <option value="$2000 - $3000 USD" class="text-white lexend bg-blu hover:bg-vio" style="background-color: #050042;">$2000 - $3000 USD</option>
+                                  
+                                  </select>
+                                </div>
+                            
+                        </div>
+                        </div>
+                          </div>
+                          
+                          <div class=" w-full mt-8">
+                            <div class="relative">
+                              <label for="message" class="leading-7 text-md font-bold text-left text-blu absolute left-0 -top-10"> How did you hear about us?</label>
+                              <select required id="message" name="message" class="w-full   select bg-opacity-50 rounded border-10 border-vio focus:border-vio focus:bg-white focus:ring-2 focus:ring-purple-200 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors mb:8 duration-200 ease-in-out" placeholder="Your message">
+                                
+                                    <option value="" disabled selected class="text-white lexend bg-blu hover:bg-purp" style="background-color: #050042;">Select</option>
+                                    <option value="Google"  class="text-white lexend bg-blu hover:bg-purp" style="background-color: #050042;">Google</option>
+                                    <option value="Bing" class="text-white lexend bg-blu" style="background-color: #050042;">Bing</option>
+                                    <option value="Dribbble" class="text-white lexend bg-blu hover:bg-vio" style="background-color: #050042;">Dribbble</option>
+                                    <option value="Behance" class="text-white lexend bg-blu hover:bg-vio" style="background-color: #050042;">Behance</option>
+                                    <option value="Facebook" class="text-white lexend bg-blu hover:bg-vio" style="background-color: #050042;">Facebook</option>
+                                      <option value="Linkedin" class="text-white lexend bg-blu hover:bg-vio" style="background-color: #050042;">Linkedin</option>
+                                    <option value="Instragram" class="text-white lexend bg-blu hover:bg-vio" style="background-color: #050042;">Instragram</option>
+                                    <option value="Clutch" class="text-white lexend bg-blu hover:bg-vio" style="background-color: #050042;">Clutch</option>
+                                    <option value="Referral" class="text-white lexend bg-blu hover:bg-vio" style="background-color: #050042;">Referral</option>
+                                    <option value="Others" class="text-white lexend bg-blu hover:bg-vio" style="background-color: #050042;">Others</option>
+                                  
+                                  
+                              </select>
+
+                            </div></div>
+
+
+                          <div class="p-2 w-full">
+                            <button class="flex mx-auto text-white w-full bg-vio text-center mt-5 border-0 py-2  focus:outline-none hover:bg-indigo-600 rounded inline-flex justify-center"><center>Submit</center></button>
+                          </div>
+                       
+                        </div>
+                      </div>
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+  <section class="text-gre body-font md:mb-36 mb-52">
+    <div class="container px-5 pt-4 pb-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-20">
+        <h2 class="text-3xl text-blu tracking-normal lexend font-bold title-font mb-1">Contact Details</h2>
+      </div>
+      <div class="lg:flex lg:flex-wrap grid -m-4">
+        
+        <div class="p-4 md:w-full lg:w-1/3">
+          <div class="flex rounded-lg h-full bg-white drop-shadow-xl p-8 flex-col">
+            <div class=" items-center mx-auto mb-3">
+              <div class="w-10 h-10 mx-auto inline-flex items-center justify-center rounded-full bg-purp text-white flex-shrink-0">
+               <img src="./img/Group 120009.svg" class="h-4 w-4" alt="">
+              </div>
+            </div>
+            <div class="flex-grow mx-auto mt-3">
+              <p class="leading-relaxed text-lg  text-center">Here is the full of street address of potential </p>
+                
+              
+            </div>
+          </div>
+        </div>
+        <div class="p-4 md:w-full lg:w-1/3">
+          <div class="flex rounded-lg h-full bg-white drop-shadow-xl p-8 flex-col">
+            <div class=" items-center mx-auto mb-3">
+              <div class="w-10 h-10 mx-auto inline-flex items-center justify-center rounded-full bg-purp text-white flex-shrink-0">
+               <img src="./img/Group 120010.svg" class="h-4 w-4" alt="">
+              </div>
+            </div>
+            <div class=" w-full mx-auto mt-3">
+              <p class="leading-relaxed text-lg text-center ">+82 491-81-02498 <br>
+                +82 491-81-02498</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="p-4 md:w-full lg:w-1/3">
+          <div class="flex rounded-lg h-full bg-white drop-shadow-xl p-8 flex-col">
+            <div class=" items-center mx-auto mb-3">
+              <div class="w-10 h-10 mx-auto inline-flex items-center justify-center rounded-full bg-purp text-white flex-shrink-0">
+               <img src="./img/Group 120016.svg" class="h-4 w-4" alt="">
+              </div>
+            </div>
+            <div class=" w-full mx-auto mt-3">
+              <p class="leading-relaxed text-lg text-center">contact@potentialai.com <br>
+                contact@potentialai.com 
+                </p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="lg:relative grid mt-36">
+
+      <div class="lg:absolute lg:-top-36  text-white lg:right-4  flex justify-center items-center w-full z-10">
+        <div class=" lg:w-9/12 h-full w-full py-5 px-4 rounded-lg  mx-auto bg-vio " >
+         <div class='flex flex-wrap  md:flex-row flex-col w-full md:p-6 p-3  md:justify-between '>
+           <h1 class='text-4xl  lexend leading-relaxed tracking-wide mx-5 mb-4 md:mb-0'>Are you looking for <b> AI, <br>
+          Apps, Web services?</b> </h1>
+       <button class='w-[195px] h-[82px] bg-white mx-auto lg:mx-0 hover:bg-grey-200 rounded-lg'><a href="./contact.html" class='lexend text-purp text-xl font-bold'>Contact us</a></button>
+  </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+      
+    
+  <footer class="text-white body-font w-full h-full bg-blu" >
+    <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+      <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+        <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900" href="./index.html">
+         
+          <img src="./img/ogo.svg" class="w-40 text-white pl-3 ">
+        </a>
+        <p class="mt-2 text-sm pl-3">Potential is a lean startup developer with the fastest development speed in Korea</p>
+        <p class="mt-2 text-lg font-bold pl-3 font-lexend">Let's talk</p>
+        <p class="mt-2 text-sm pl-3">contact@potentialai.com <br>+82 491-81-02498
+
+        </p>
+      </div>
+      <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium tracking-widest text-lg mb-3 font-lexend">Recent project</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class=" hover:text-gray-800">Projct Name</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-100">Projct Name</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-100">Projct Name</a>
+            </li>
+            <li>
+              <a class="hover:text-gray-100">Projct Name</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium  tracking-widest text-lg mb-3 font-lexend">Navigation</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class=" hover:text-gray-100">About potential</a>
+            </li>
+            <li>
+              <a class= "hover:text-gray-100">Services of AI </a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-100">Services of App</a>
+            </li>
+            <li>
+              <a class="hover:text-gray-100">Services of Web</a>
+            </li>
+                        <li>
+              <a class=" hover:text-gray-100">Blog</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-100">Contact</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium  tracking-widest text-lg mb-3 font-lexend">Legal</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class=" hover:text-gray-100">Terms and conditons</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-100">Privacy policy</a>
+            </li>
+            <li>
+              <a class="hover:text-gray-100">Cookie policy</a>
+            </li>
+                    </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium  tracking-widest text-lg mb-3 font-lexend">Our Location</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class=" hover:text-gray-800">South Korea</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-800">Bangladesh</a>
+            </li>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="md:flex md:flex-row md:flex-wrap grid grid-cols-3 gap-x-4 mx-auto p-6 justify-center justify-evenly mb-5 text-white">
+      <p class=" font-lexend text-xl">Dribbble</p>
+      <p class=" font-lexend text-xl"> Behance</p>
+      <p class=" font-lexend text-xl">Github</p>
+      <p class=" font-lexend text-xl">Linked In</p>
+      <p class=" font-lexend text-xl">Facebook</p>
+      <p class=" font-lexend text-xl">Instagram</p>
+    </div>
+    <img src="./img/Line 3.svg" alt="">
+    <div class="bg-blu" >
+      <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+        <p class="text-white text-sm mx-auto text-center sm:text-left">Copyright © 2023 Potential. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+
+  </footer>
+  
+</div>
+
+
+
+
+
+
+      <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenuOpenButton = document.getElementById('mobile-open-button');
+        const mbopen = document.getElementById('mb-menu-show');
+        const mobileMenu = document.getElementById('mobile-menu');
+      const group1 = document.getElementById('group1');
+      const group2 = document.getElementById('group2');
+        mobileMenuButton.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      
+        mobileMenuOpenButton.addEventListener('click', () => {
+          mobileMenu.classList.remove('hidden');
+        
+        });
+        const grup = document.getElementById('grup')
+        const submenu = document.getElementById('show-sub-menu');
+        grup.addEventListener('click',()=>{
+          submenu.classList.toggle('hidden')
+        })
+ group1.addEventListener('click', () => {
+    group2.classList.toggle('hidden');
+});
+
+           </script>
+      
+      
+</body>
+</html>

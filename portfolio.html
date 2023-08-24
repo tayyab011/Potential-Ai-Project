@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+         'blu': '#050042',
+         'gre': '#3b3e4e',
+         'vio': '#5D48E0',
+         'vio-shadow': '#4659c4',
+         'purp': '#5D48E0',
+         
+          },
+          }
+        }
+      }
+    </script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    
+
+    <header class="bg-white lexend">
+        <nav class="mx-auto flex max-w-7xl items-center shadow-xl justify-between p-6   drop-shadow-lg lg:px-20 " aria-label="Global">
+          <div class="flex lg:flex-1">
+            <a href="./index.html" class="-m-1.5 p-1.5">
+              <span class="sr-only">Your Company</span>
+              <img class="h-5  w-auto" src="./img/image 1.svg" alt="">
+            </a>
+          </div>
+          <div class="flex lg:hidden">
+            <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"  id="mobile-open-button"> 
+              <span class="sr-only">Open main menu</span>
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </button>
+          </div>
+          
+          <div class="hidden lg:flex lg:gap-x-8">
+            
+            <a href="./index.html" class="text-sm font-semibold leading-6 text-gre hover:text-purp ">Home</a>
+            <div class="relative group" id="grup">
+
+              <button type="button" class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gre hover:text-purp " aria-expanded="false">
+                Our services
+                <svg class="h-5 w-5 flex-none text-gre" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                </svg>
+              </button>
+      
+                <div class="absolute hidden  -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5" id="show-sub-menu">
+          <div class="p-4">
+            <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+              
+              <div class="flex-auto">
+                <a href="./gd.html" class="block font-semibold text-gre hover:text-purp ">
+            Graphic design
+              </div>
+            </div>
+            <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+              
+              <div class="flex-auto">
+                <a href="./visualapp.html" class="block font-semibold text-gre hover:text-purp ">
+                  Apps
+              </div>
+            </div>
+            <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+              
+              <div class="flex-auto">
+                <a href="./webservices.html" class="block font-semibold text-gre hover:text-purp ">
+                  Web
+              </div>
+            </div>
+          </div>
+            </div>
+            </div>
+      
+            <a href="./portfolio.html" class="text-sm font-semibold leading-6 text-gre hover:text-purp ">Portfolio</a>
+            <a href="./team.html" class="text-sm font-semibold leading-6 text-gre hover:text-purp ">Team</a>
+            <a href="./blog.html" class="text-sm font-semibold leading-6 text-gre hover:text-purp ">Blog</a>
+          </div>
+          <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+            <a href="./contact.html" class="text-sm font-semibold leading-6 text-white bg-purp drop-shadow-xl rounded-lg px-8  py-3  text-center  font-bold hover:text-purp hover:bg-white hover:font-semi-bold ">Contact us </a>
+          </div>
+        </nav>
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <div class="lg:hidden hidden " id="mobile-menu" role="dialog" aria-modal="true">
+          <!-- Background backdrop, show/hide based on slide-over state. -->
+          <div class="fixed inset-0 z-10"></div>
+          <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 " id="mb-menu-show">
+            <div class="flex items-center justify-between">
+              <a href="./index.html" class="-m-1.5 p-1.5">
+                <span class="sr-only">Your Company</span>
+                <img class="h-4 w-auto" src="img/image 1.svg" alt="">
+              </a>
+              <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700"  id="mobile-menu-button">
+                <span class="sr-only">Close menu</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-6 flow-root">
+              <div class="-my-6 divide-y divide-gray-500/10">
+                <div class="space-y-2 py-6">
+                  <div class="-mx-3">
+                    <button type="button" class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" aria-controls="disclosure-1" aria-expanded="false" id="group1">
+                   Our services
+                      <!--
+                        Expand/collapse icon, toggle classes based on menu open state.
+      
+                        Open: "rotate-180", Closed: ""
+                      -->
+                      <svg  class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                      </svg>
+                    </button>
+                    <!-- 'Product' sub-menu, show/hide based on menu state. -->
+                      <div class="mt-2 space-y-2 hidden" id="group2">
+                      <a href="./gd.html" class="block rounded-lg hover:bg-vio hover:text-white py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50 group-hover:submenu-open">Graphic design</a>
+                      <a href="./visualapp.html" class="block hover:bg-vio hover:text-white rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50 group-hover:submenu-open">App</a>
+                      <a href="./webservices.html" class="block hover:bg-vio hover:text-white rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50 group-hover:submenu-open">Web</a>
+                    </div>
+                  </div>
+                  </div>
+                  <a href="./porfolio.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Portfolio</a>
+                  <a href="./team.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Team</a>
+                  <a href="./blog.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Blog</a>
+                </div>
+                <div class="py-6">
+                  <a href="./contact.html" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contact us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      
+      <section class="text-gray-600 body-font z-10" style="background-image: url('./img/Rectangle 6.jpg')">
+        <div class="container mx-auto flex px-2 py-24 md:flex-row flex-col items-center">
+          <div class="lg:flex-grow md:w-2/3 l flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+            <h1 class="title-font lexend sm:text-6xl pl-2 text-4xl mb-4 font-medium  tracking-wide text-blu">We construct<b> timeless journeys</b> 
+            </h1>
+          </div>
+          <div class=" md:w-1/3 w-5/6">
+           <h2 class="text-left font-semibold text-3xl text-blu tracking-wide mb-6 flex">
+        <img src="./img/Line 9.svg" alt=""> &nbsp;
+Our work</h2>
+           <p class=" text-lg mb-8 ">
+            We are a collaborative group of skilled digital product professionals, including seasoned product managers, designers, and developers with diverse expertise.</p>
+        </div>
+        </div>
+      </section>
+    
+    <section class="rounded-lg">
+        <div class="flex flex-wrap w-9/12 rounded-lg h-[100px] my-12 mx-auto drop-shadow-2xl">
+            <button class="bg-white w-1/3 mx-0 font-bold lexend text-3xl text-center hover:text-xl"><a href="ai.html">AI</a></button>
+            <button class="bg-vio w-1/3 mx-0 font-bold text-white lexend text-3xl text-center hover:text-xl"><a href="app.html">APP</a></button>
+            <button class="bg-white w-1/3 mx-0 font-bold lexend text-3xl text-center hover:text-xl "><a href="web.html">WEB</a></button>
+        </div>
+    </section>
+    
+    <section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    
+    <div class="flex flex-wrap -m-4">
+      <div class=" md:w-1/2 p-4">
+        <div class="bg-white border-2 p-6 rounded-lg">
+          <img class="h-7/12 rounded w-full object-cover object-center mb-6" src="./img/Rectangle 14.jpg" alt="content">
+          
+          <h2 class="text-2xl lexend text-blu font-bold title-font mb-4">NFT Marketplace</h2>
+          <p class="leading-relaxed text-base"> This is NFT Marketplace product. Traditional works of art such as paintings are valuable because they are one of a kind. with NFTs, artwork can be "tokenised" to create a digital certificate of ownership that can be bought and sold.</p>
+        </div>
+      </div>
+      <div class=" md:w-1/2 p-4">
+        <div class="bg-white border-2 p-6 rounded-lg">
+          <img class="h-7/12 rounded w-full object-cover object-center mb-6" src="./img/Rectangle114.jpg" alt="content">
+          
+          <h2 class="text-2xl lexend text-blu font-bold title-font mb-4">Food Delivery</h2>
+          <p class="leading-relaxed text-base"> Food delivery services offer the convenience of having delicious meals delivered straight to your doorstep, saving time and effort in meal preparation.</p>
+        </div>
+      </div>
+      <div class=" md:w-1/2 p-4">
+        <div class="bg-white border-2 p-6 rounded-lg">
+          <img class="h-7/12 rounded w-full object-cover object-center mb-6" src="./img/Rectangle145.jpg" alt="content">
+          
+          <h2 class="text-2xl lexend text-blu font-bold title-font mb-4">Medical App by Budiarti R</h2>
+          <p class="leading-relaxed text-base">Medical apps have gained popularity due to their convenience and accessibility, empowering individuals to take a more active role in managing their health and well-being. </p>
+        </div>
+      </div>
+      <div class=" md:w-1/2 p-4">
+        <div class="bg-white border-2 p-6 rounded-lg">
+          <img class="h-7/12 rounded w-full object-cover object-center mb-6" src="./img/Rectangle146.jpg" alt="content">
+          
+          <h2 class="text-2xl lexend text-blu font-bold title-font mb-4">Furniture Shop</h2>
+          <p class="leading-relaxed text-base"> From modern and contemporary designs to classic and traditional styles, our furniture shop aims to fulfill every customer's furnishing needs and create a welcoming atmosphere in their homes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" flex justify center flex-wrap mb-36">
+<a class="text-lg text-purp mx-auto inline-flex items-center mb-36" href=""> See more works <svg class="w-4 h-4 ml-2 mt-1" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12h14"></path>
+        <path d="M12 5l7 7-7 7"></path>
+      </svg>
+</a>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="lg:relative grid mt-36">
+
+      <div class="lg:absolute lg:-top-36  text-white lg:right-4  flex justify-center items-center w-full z-10">
+        <div class=" lg:w-9/12 h-full w-full py-5 px-4 rounded-lg  mx-auto bg-vio " >
+         <div class='flex flex-wrap  md:flex-row flex-col w-full md:p-6 p-3  md:justify-between '>
+           <h1 class='text-4xl  lexend leading-relaxed tracking-wide mx-5 mb-4 md:mb-0'>Are you looking for <b> AI, <br>
+          Apps, Web services?</b> </h1>
+       <button class='w-[195px] h-[82px] bg-white mx-auto lg:mx-0 hover:bg-grey-200 rounded-lg'><a href="./contact.html" class='lexend text-purp text-xl font-bold'>Contact us</a></button>
+  </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+      
+    
+  <footer class="text-white body-font w-full h-full bg-blu" >
+    <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+      <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+        <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900" href="./index.html">
+         
+          <img src="./img/ogo.svg" class="w-40 text-white pl-3 ">
+        </a>
+        <p class="mt-2 text-sm pl-3">Potential is a lean startup developer with the fastest development speed in Korea</p>
+        <p class="mt-2 text-lg font-bold pl-3 font-lexend">Let's talk</p>
+        <p class="mt-2 text-sm pl-3">contact@potentialai.com <br>+82 491-81-02498
+
+        </p>
+      </div>
+      <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium tracking-widest text-lg mb-3 font-lexend">Recent project</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class=" hover:text-gray-800">Projct Name</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-100">Projct Name</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-100">Projct Name</a>
+            </li>
+            <li>
+              <a class="hover:text-gray-100">Projct Name</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium  tracking-widest text-lg mb-3 font-lexend">Navigation</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class=" hover:text-gray-100">About potential</a>
+            </li>
+            <li>
+              <a class= "hover:text-gray-100">Services of AI </a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-100">Services of App</a>
+            </li>
+            <li>
+              <a class="hover:text-gray-100">Services of Web</a>
+            </li>
+                        <li>
+              <a class=" hover:text-gray-100">Blog</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-100">Contact</a>
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium  tracking-widest text-lg mb-3 font-lexend">Legal</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class=" hover:text-gray-100">Terms and conditons</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-100">Privacy policy</a>
+            </li>
+            <li>
+              <a class="hover:text-gray-100">Cookie policy</a>
+            </li>
+                    </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium  tracking-widest text-lg mb-3 font-lexend">Our Location</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class=" hover:text-gray-800">South Korea</a>
+            </li>
+            <li>
+              <a class=" hover:text-gray-800">Bangladesh</a>
+            </li>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="md:flex md:flex-row md:flex-wrap grid grid-cols-3 gap-x-4 mx-auto p-6 justify-center justify-evenly mb-5 text-white">
+      <p class=" font-lexend text-xl">Dribbble</p>
+      <p class=" font-lexend text-xl"> Behance</p>
+      <p class=" font-lexend text-xl">Github</p>
+      <p class=" font-lexend text-xl">Linked In</p>
+      <p class=" font-lexend text-xl">Facebook</p>
+      <p class=" font-lexend text-xl">Instagram</p>
+    </div>
+    <img src="./img/Line 3.svg" alt="">
+    <div class="bg-blu" >
+      <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+        <p class="text-white text-sm mx-auto text-center sm:text-left">Copyright © 2023 Potential. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+
+  </footer>
+  
+</div>
+
+
+
+
+ <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenuOpenButton = document.getElementById('mobile-open-button');
+        const mbopen = document.getElementById('mb-menu-show');
+        const mobileMenu = document.getElementById('mobile-menu');
+      const group1 = document.getElementById('group1');
+      const group2 = document.getElementById('group2');
+        mobileMenuButton.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      
+        mobileMenuOpenButton.addEventListener('click', () => {
+          mobileMenu.classList.remove('hidden');
+        
+        });
+        const grup = document.getElementById('grup')
+        const submenu = document.getElementById('show-sub-menu');
+        grup.addEventListener('click',()=>{
+          submenu.classList.toggle('hidden')
+        })
+ group1.addEventListener('click', () => {
+    group2.classList.toggle('hidden');
+});
+
+           </script>
+</body>
+</html>
